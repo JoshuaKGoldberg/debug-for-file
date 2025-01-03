@@ -1,6 +1,6 @@
 <h1 align="center">debug-for-file</h1>
 
-<p align="center">debug() wrapper that creates a string based on your file's path within the package. 🧶</p>
+<p align="center"><code>debug()</code> wrapper that creates a string based on your file's path within the package. 🧶</p>
 
 <p align="center">
 	<!-- prettier-ignore-start -->
@@ -22,10 +22,48 @@ npm i debug-for-file
 ```
 
 ```ts
-import { greet } from "debug-for-file";
+import { debugForFile } from "debug-for-file";
 
-greet("Hello, world! 💖");
+const log = debugForFile(import.meta.url);
+
+log("booting $o", "My App");
 ```
+
+`debugForFile` takes in the current path to your file, creates a namespace string based off your package name and the file's path, and passes that namespace to `debug`.
+Some examples:
+
+| Package Name   | File Path        | `debug` Namespace       |
+| -------------- | ---------------- | ----------------------- |
+| `example`      | `lib/index.js`   | `'example:index'`       |
+| `example`      | `lib/abc/def.js` | `'example:abc:def'`     |
+| `@org/example` | `lib/abc/def.js` | `'org:example:abc:def'` |
+
+In other words, if your package name is `example` and your file name is `lib/index.js`, the following two code blocks are equivalent:
+
+```ts
+import { debug } from "debug";
+
+const log = debug("example:lib:index");
+
+log("Hello, world!");
+```
+
+```ts
+import { debugForFile } from "debug";
+
+const log = debugForFile(import.meta.url);
+
+log("Hello, world!");
+```
+
+## Why?
+
+Hand-writing `debug` namespaces is a pain.
+They tend to become very long in large projects.
+It's easy to forget to change those long strings when you move around or rename files.
+
+This helper manages all that for you.
+Plus, it establishes a predictable format for the namespaces.
 
 ## Development
 

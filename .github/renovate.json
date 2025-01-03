@@ -5,6 +5,12 @@
 	"ignoreDeps": ["codecov/codecov-action"],
 	"labels": ["dependencies"],
 	"minimumReleaseAge": "7 days",
+	"packageRules": [
+		{
+			"enabled": false,
+			"matchDepNames": ["debug"]
+		}
+	],
 	"patch": { "enabled": false },
 	"postUpdateOptions": ["pnpmDedupe"]
 }

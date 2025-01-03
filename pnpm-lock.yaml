@@ -7,6 +7,13 @@ settings:
 importers:
 
   .:
+    dependencies:
+      debug:
+        specifier: '>=4'
+        version: 4.4.0
+      read-package-up:
+        specifier: ^11.0.0
+        version: 11.0.0
     devDependencies:
       '@eslint-community/eslint-plugin-eslint-comments':
         specifier: 4.4.1
@@ -17,6 +24,9 @@ importers:
       '@release-it/conventional-changelog':
         specifier: 9.0.3
         version: 9.0.3(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.0.0)(release-it@17.11.0(typescript@5.7.2))
+      '@types/debug':
+        specifier: ^4.1.12
+        version: 4.1.12
       '@types/eslint-plugin-markdown':
         specifier: 2.0.2
         version: 2.0.2
