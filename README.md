@@ -1,6 +1,6 @@
 <h1 align="center">debug-for-file</h1>
 
-<p align="center"><code>debug()</code> wrapper that creates a string based on your file's path within the package. 🧶</p>
+<p align="center"><a href="https://npmjs.com/package/debug"><code>debug</code></a> wrapper that creates a string based on your file's path within the package. 🧶</p>
 
 <p align="center">
 	<!-- prettier-ignore-start -->
