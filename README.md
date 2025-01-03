@@ -41,7 +41,7 @@ Some examples:
 In other words, if your package name is `example` and your file name is `lib/index.js`, the following two code blocks are equivalent:
 
 ```ts
-import { debug } from "debug";
+import debug from "debug";
 
 const log = debug("example:lib:index");
 
