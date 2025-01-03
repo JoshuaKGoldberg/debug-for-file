@@ -1,10 +1,10 @@
 {
 	"name": "debug-for-file",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"description": "debug() wrapper that creates a string based on your file's path within the\npackage. 🧶",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/JoshuaKGoldberg/debug-for-file"
+		"url": "git+https://github.com/JoshuaKGoldberg/debug-for-file.git"
 	},
 	"license": "MIT",
 	"author": {
