@@ -1,6 +1,9 @@
 <h1 align="center">debug-for-file</h1>
 
-<p align="center"><a href="https://npmjs.com/package/debug"><code>debug</code></a> wrapper that creates a string based on your file's path within the package. 🧶</p>
+<p align="center">
+	debug() wrapper that creates a string based on your file's path within the package.
+	🧶
+</p>
 
 <p align="center">
 	<!-- prettier-ignore-start -->
@@ -10,8 +13,8 @@
 	<!-- prettier-ignore-end -->
 	<a href="https://github.com/JoshuaKGoldberg/debug-for-file/blob/main/.github/CODE_OF_CONDUCT.md" target="_blank"><img alt="🤝 Code of Conduct: Kept" src="https://img.shields.io/badge/%F0%9F%A4%9D_code_of_conduct-kept-21bb42" /></a>
 	<a href="https://codecov.io/gh/JoshuaKGoldberg/debug-for-file" target="_blank"><img alt="🧪 Coverage" src="https://img.shields.io/codecov/c/github/JoshuaKGoldberg/debug-for-file?label=%F0%9F%A7%AA%20coverage" /></a>
-	<a href="https://github.com/JoshuaKGoldberg/debug-for-file/blob/main/LICENSE.md" target="_blank"><img alt="📝 License: MIT" src="https://img.shields.io/badge/%F0%9F%93%9D_license-MIT-21bb42.svg"></a>
-	<a href="http://npmjs.com/package/debug-for-file"><img alt="📦 npm version" src="https://img.shields.io/npm/v/debug-for-file?color=21bb42&label=%F0%9F%93%A6%20npm" /></a>
+	<a href="https://github.com/JoshuaKGoldberg/debug-for-file/blob/main/LICENSE.md" target="_blank"><img alt="📝 License: MIT" src="https://img.shields.io/badge/%F0%9F%93%9D_license-MIT-21bb42.svg" /></a>
+	<a href="http://npmjs.com/package/debug-for-file" target="_blank"><img alt="📦 npm version" src="https://img.shields.io/npm/v/debug-for-file?color=21bb42&label=%F0%9F%93%A6%20npm" /></a>
 	<img alt="💪 TypeScript: Strict" src="https://img.shields.io/badge/%F0%9F%92%AA_typescript-strict-21bb42.svg" />
 </p>
 
@@ -68,7 +71,7 @@ Plus, it establishes a predictable format for the namespaces.
 ## Development
 
 See [`.github/CONTRIBUTING.md`](./.github/CONTRIBUTING.md), then [`.github/DEVELOPMENT.md`](./.github/DEVELOPMENT.md).
-Thanks! 💖
+Thanks! 🧶
 
 ## Contributors
 
@@ -90,6 +93,4 @@ Thanks! 💖
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 <!-- spellchecker: enable -->
 
-<!-- You can remove this notice if you don't want it 🙂 no worries! -->
-
-> 💝 This package was templated with [`create-typescript-app`](https://github.com/JoshuaKGoldberg/create-typescript-app) using the [`create` engine](https://github.com/JoshuaKGoldberg/create).
+> 💝 This package was templated with [`create-typescript-app`](https://github.com/JoshuaKGoldberg/create-typescript-app) using the [Bingo engine](https://create.bingo).
