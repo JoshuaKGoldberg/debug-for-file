@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@types/debug':
+        specifier: ^4.1.12
+        version: 4.1.12
       debug:
         specifier: ^4.4.3
         version: 4.4.3
@@ -27,9 +30,6 @@ importers:
       '@release-it/conventional-changelog':
         specifier: 10.0.4
         version: 10.0.4(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.2.1)(release-it@19.2.2(@types/node@25.0.3)(magicast@0.5.1))
-      '@types/debug':
-        specifier: 4.1.12
-        version: 4.1.12
       '@types/node':
         specifier: 25.0.3
         version: 25.0.3
