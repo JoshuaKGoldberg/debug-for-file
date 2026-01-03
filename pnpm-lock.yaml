@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       '@types/debug':
-        specifier: 4.1.12
+        specifier: ^4.1.12
         version: 4.1.12
       debug:
         specifier: ^4.4.3
