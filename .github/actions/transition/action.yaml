@@ -37,7 +37,7 @@ runs:
       with:
         properties: engines
     - if: steps.package-change.outputs.changed == 'true'
-      uses: JoshuaKGoldberg/draft-pull-request-once-action@0.0.1
+      uses: JoshuaKGoldberg/draft-pull-request-once-action@bedb63df0d09d762e9d5b5b1839c8704a6526fcc # 0.1.0
       with:
         github-token: ${{ inputs.token }}
         message: |-
