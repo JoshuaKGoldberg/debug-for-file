@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.4.0](https://github.com/JoshuaKGoldberg/debug-for-file/compare/0.3.0...0.4.0) (2026-05-05)
+
+### Features
+
+- add browser entrypoint ([#469](https://github.com/JoshuaKGoldberg/debug-for-file/issues/469)) ([b1c6034](https://github.com/JoshuaKGoldberg/debug-for-file/commit/b1c6034da5de6553ffe0d026fffe83c2f45e84b9)), closes [#471](https://github.com/JoshuaKGoldberg/debug-for-file/issues/471)
+
 ## 0.3.0 (2026-04-02)
 
 ### Features
