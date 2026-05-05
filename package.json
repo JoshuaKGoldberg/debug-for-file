@@ -12,7 +12,14 @@
 		"email": "npm@joshuakgoldberg.com"
 	},
 	"type": "module",
+	"exports": {
+		".": {
+			"browser": "./lib/browser.js",
+			"default": "./lib/index.js"
+		}
+	},
 	"main": "lib/index.js",
+	"browser": "./lib/browser.js",
 	"files": [
 		"lib/"
 	],
