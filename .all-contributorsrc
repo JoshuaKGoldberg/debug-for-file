@@ -27,6 +27,15 @@
         "bug",
         "code"
       ]
+    },
+    {
+      "login": "kovsu",
+      "name": "Konv Suu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/82451257?v=4",
+      "profile": "https://www.2ou.me",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
