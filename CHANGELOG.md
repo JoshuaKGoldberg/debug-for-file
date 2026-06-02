@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.4.1](https://github.com/JoshuaKGoldberg/debug-for-file/compare/0.4.0...0.4.1) (2026-06-02)
+
+### Bug Fixes
+
+- resolve file:// URLs before deriving the namespace ([#505](https://github.com/JoshuaKGoldberg/debug-for-file/issues/505)) ([b230672](https://github.com/JoshuaKGoldberg/debug-for-file/commit/b230672c09172fddab4bc0a0b758281e5e01346d)), closes [#504](https://github.com/JoshuaKGoldberg/debug-for-file/issues/504)
+
 ## [0.4.0](https://github.com/JoshuaKGoldberg/debug-for-file/compare/0.3.0...0.4.0) (2026-05-05)
 
 ### Features
