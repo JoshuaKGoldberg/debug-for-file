@@ -1,3 +1,4 @@
+import { pathToFileURL } from "node:url";
 import { describe, expect, it, vi } from "vitest";
 
 import { filePathToNamespace } from "./filePathToNamespace.js";
@@ -28,5 +29,21 @@ describe("filePathToNamespace", () => {
 		const actual = filePathToNamespace("abc/def");
 
 		expect(actual).toBe("xyz:def");
+	});
+
+	it("resolves a file:// URL to its package path when given import.meta.url", () => {
+		mockReadPackageUpSync.mockReturnValueOnce({
+			packageJson: { name: "xyz" },
+			path: "/repo/pkg/package.json",
+		});
+
+		const actual = filePathToNamespace(
+			pathToFileURL("/repo/pkg/lib/sub/file.js").href,
+		);
+
+		expect(mockReadPackageUpSync).toHaveBeenCalledWith({
+			cwd: "/repo/pkg/lib/sub",
+		});
+		expect(actual).toBe("xyz:sub:file");
 	});
 });
