@@ -14,9 +14,9 @@ importers:
       debug:
         specifier: ^4.4.3
         version: 4.4.3
-      read-package-up:
-        specifier: ^12.0.0
-        version: 12.0.0
+      empathic:
+        specifier: ^2.0.1
+        version: 2.0.1
     devDependencies:
       '@eslint-community/eslint-plugin-eslint-comments':
         specifier: 4.7.0
@@ -72,6 +72,9 @@ importers:
       eslint-plugin-yml:
         specifier: 3.4.0
         version: 3.4.0(eslint@10.5.0(jiti@2.7.0))
+      fs-fixture:
+        specifier: ^2.14.0
+        version: 2.14.0
       husky:
         specifier: 9.1.7
         version: 9.1.7
@@ -2366,6 +2369,10 @@ packages:
     resolution: {integrity: sha512-9XNj/o4wrRFyhSMJOvsuyMwy8aUfBaZ1VrqHVfohyXf0Sw0e+yfKG+xZaY3arGCOMdwFsqObtzVOc1gU9KiT9w==}
     engines: {node: '>=18.3.0'}
     hasBin: true
+
+  fs-fixture@2.14.0:
+    resolution: {integrity: sha512-lZBaSOewY5snBSyOjn3fmo2ES5gOR7Q1Y6dILH0/xR0xejjUhux65OGaFWhQ+jiyvTi5HOHqXQrQ9v48Lsmqbw==}
+    engines: {node: '>=18.0.0'}
 
   fsevents@2.3.3:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
@@ -6451,6 +6458,8 @@ snapshots:
   formatly@0.3.0:
     dependencies:
       fd-package-json: 2.0.0
+
+  fs-fixture@2.14.0: {}
 
   fsevents@2.3.3:
     optional: true
