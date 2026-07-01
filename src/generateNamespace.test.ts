@@ -5,7 +5,9 @@ import { generateNamespace } from "./generateNamespace.js";
 describe("generateNamespace", () => {
 	test.each([
 		["dist/index.js", undefined, "index"],
+		["dist\\index.js", undefined, "index"],
 		["lib/index.js", undefined, "index"],
+		["lib\\index.js", undefined, "index"],
 		["src/index.js", undefined, "index"],
 		["dist/index.js", "example", "example:index"],
 		["lib/index.js", "example", "example:index"],
