@@ -43,8 +43,8 @@ importers:
         specifier: 0.6.1
         version: 0.6.1
       create-typescript-app:
-        specifier: 2.60.1
-        version: 2.60.1(bingo-systems@0.5.5)(supports-color@7.2.0)(typescript@5.9.3)
+        specifier: 2.61.1
+        version: 2.61.1(bingo-systems@0.5.5)(supports-color@7.2.0)(typescript@5.9.3)
       cspell:
         specifier: 10.0.0
         version: 10.0.0
@@ -1844,8 +1844,8 @@ packages:
   convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
 
-  create-typescript-app@2.60.1:
-    resolution: {integrity: sha512-P5yM7IUv1zyG1R1OX3hVISZM8UvE+ihfME/oRfviM5X9C8vmM988cu/q3P+tPyguBmBuiEUuFQb+sWzj8R7c7g==}
+  create-typescript-app@2.61.1:
+    resolution: {integrity: sha512-PRHNi+nkwfbd8QqXaaVTGhvBjpN7U66ERmyD3EJ47wL4h9rltUou1v+Eb7ZIaEU/Ab0bRY58dzvCl1JhdGp0yQ==}
     engines: {node: '>=20.19.0'}
     hasBin: true
 
@@ -5684,7 +5684,7 @@ snapshots:
 
   convert-source-map@2.0.0: {}
 
-  create-typescript-app@2.60.1(bingo-systems@0.5.5)(supports-color@7.2.0)(typescript@5.9.3):
+  create-typescript-app@2.61.1(bingo-systems@0.5.5)(supports-color@7.2.0)(typescript@5.9.3):
     dependencies:
       '@typescript-eslint/typescript-estree': 8.65.0(supports-color@7.2.0)(typescript@5.9.3)
       bingo: 0.9.3
