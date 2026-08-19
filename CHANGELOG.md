@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.4.2](https://github.com/JoshuaKGoldberg/debug-for-file/compare/0.4.1...0.4.2) (2026-07-01)
+
+### Bug Fixes
+
+- handle windows slashes in namespace generation ([#538](https://github.com/JoshuaKGoldberg/debug-for-file/issues/538)) ([762bfa9](https://github.com/JoshuaKGoldberg/debug-for-file/commit/762bfa90cde60ff439679cdeff6164ac0da7e7cc)), closes [#522](https://github.com/JoshuaKGoldberg/debug-for-file/issues/522)
+
 ## [0.4.1](https://github.com/JoshuaKGoldberg/debug-for-file/compare/0.4.0...0.4.1) (2026-06-02)
 
 ### Bug Fixes

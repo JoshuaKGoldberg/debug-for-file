@@ -1,6 +1,6 @@
 export function generateNamespace(filePath: string, packageName?: string) {
 	const filePathProcessed = filePath
-		.replace(/^(?:dist|lib|src)\//, "")
+		.replace(/^(?:dist|lib|src)[/\\]/, "")
 		.replace(/\.\w+$/g, "");
 
 	const packageNameProcessed = packageName?.replace("@", "");
