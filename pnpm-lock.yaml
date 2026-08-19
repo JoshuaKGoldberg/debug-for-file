@@ -14,9 +14,6 @@ importers:
       debug:
         specifier: ^4.4.3
         version: 4.4.3(supports-color@7.2.0)
-      read-package-up:
-        specifier: ^12.0.0
-        version: 12.0.0
     devDependencies:
       '@eslint-community/eslint-plugin-eslint-comments':
         specifier: 4.7.0
