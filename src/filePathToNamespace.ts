@@ -1,26 +1,36 @@
+import * as fs from "node:fs";
+import { findPackageJSON } from "node:module";
 import * as path from "node:path";
-import { fileURLToPath } from "node:url";
-import { readPackageUpSync } from "read-package-up";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
 import { generateNamespace } from "./generateNamespace.js";
 
 export function filePathToNamespace(filePath: string) {
-	const resolved = filePath.startsWith("file:")
+	const resolved = filePath.startsWith("file://")
 		? fileURLToPath(filePath)
 		: filePath;
 
-	const packageUp = readPackageUpSync({
-		cwd: path.dirname(resolved),
-	});
+	const packageJsonPath = findPackageJSON(".", pathToFileURL(resolved));
 
-	if (!packageUp) {
+	if (
+		packageJsonPath === undefined ||
+		path.basename(packageJsonPath) !== "package.json"
+	) {
 		return generateNamespace(resolved);
 	}
 
 	const filePathRelative = path.relative(
-		path.dirname(packageUp.path),
+		path.dirname(packageJsonPath),
 		resolved,
 	);
 
-	return generateNamespace(filePathRelative, packageUp.packageJson.name);
+	return generateNamespace(filePathRelative, readPackageName(packageJsonPath));
+}
+
+function readPackageName(packageJsonPath: string) {
+	const contents = JSON.parse(fs.readFileSync(packageJsonPath, "utf8")) as {
+		name?: string;
+	};
+
+	return contents.name;
 }
