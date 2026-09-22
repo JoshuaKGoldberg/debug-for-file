@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.5.0](https://github.com/JoshuaKGoldberg/debug-for-file/compare/0.4.2...0.5.0) (2026-09-22)
+
+### Features
+
+- use node:module's native findPackageJSON ([#602](https://github.com/JoshuaKGoldberg/debug-for-file/issues/602)) ([15eeb2b](https://github.com/JoshuaKGoldberg/debug-for-file/commit/15eeb2b7b6bdea603f773db0391cca1c34d788f1)), closes [#485](https://github.com/JoshuaKGoldberg/debug-for-file/issues/485)
+
 ## [0.4.2](https://github.com/JoshuaKGoldberg/debug-for-file/compare/0.4.1...0.4.2) (2026-07-01)
 
 ### Bug Fixes
