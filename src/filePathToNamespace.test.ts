@@ -45,18 +45,8 @@ describe("filePathToNamespace", () => {
 		expect(actual).toBe("abc:def");
 	});
 
-	it("generates a namespace with just the filePath when findPackageJSON throws", () => {
-		mockFindPackageJSON.mockImplementationOnce(() => {
-			throw new Error("ERR_MODULE_NOT_FOUND");
-		});
-
-		const actual = filePathToNamespace("abc/def");
-
-		expect(actual).toBe("abc:def");
-	});
-
-	it("generates a namespace with just the filePath when findPackageJSON resolves a path that isn't a package.json", () => {
-		mockFindPackageJSON.mockReturnValueOnce("/repo/pkg/lib/sub/file.js");
+	it("generates a namespace with just the filePath when findPackageJSON resolves a directory", () => {
+		mockFindPackageJSON.mockReturnValueOnce("/repo/pkg/lib/sub/");
 
 		const actual = filePathToNamespace("abc/def");
 

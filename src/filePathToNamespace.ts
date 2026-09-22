@@ -6,13 +6,16 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 import { generateNamespace } from "./generateNamespace.js";
 
 export function filePathToNamespace(filePath: string) {
-	const resolved = filePath.startsWith("file:")
+	const resolved = filePath.startsWith("file://")
 		? fileURLToPath(filePath)
 		: filePath;
 
-	const packageJsonPath = findClosestPackageJson(resolved);
+	const packageJsonPath = findPackageJSON(".", pathToFileURL(resolved));
 
-	if (!packageJsonPath) {
+	if (
+		packageJsonPath === undefined ||
+		path.basename(packageJsonPath) !== "package.json"
+	) {
 		return generateNamespace(resolved);
 	}
 
@@ -22,24 +25,6 @@ export function filePathToNamespace(filePath: string) {
 	);
 
 	return generateNamespace(filePathRelative, readPackageName(packageJsonPath));
-}
-
-function findClosestPackageJson(resolved: string) {
-	let found;
-
-	try {
-		// Passing the file as `base` rather than as `specifier` keeps this working
-		// for paths that don't exist on disk, which `specifier` would reject.
-		found = findPackageJSON(".", pathToFileURL(resolved));
-	} catch {
-		return undefined;
-	}
-
-	// Node resolves to the specifier itself, rather than `undefined` as
-	// documented, when no package.json exists in any parent directory.
-	return found !== undefined && path.basename(found) === "package.json"
-		? found
-		: undefined;
 }
 
 function readPackageName(packageJsonPath: string) {
