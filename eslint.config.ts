@@ -4,6 +4,7 @@ import markdown from "@eslint/markdown";
 import vitest from "@vitest/eslint-plugin";
 import jsdoc from "eslint-plugin-jsdoc";
 import jsonc from "eslint-plugin-jsonc";
+import markdownLinks from "eslint-plugin-markdown-links";
 import n from "eslint-plugin-n";
 import packageJson from "eslint-plugin-package-json";
 import perfectionist from "eslint-plugin-perfectionist";
@@ -14,7 +15,7 @@ import tseslint from "typescript-eslint";
 
 export default defineConfig(
 	globalIgnores(
-		["**/*.snap", "coverage", "lib", "node_modules", "pnpm-lock.yaml"],
+		["**/*.snap", "coverage", "dist", "node_modules", "pnpm-lock.yaml"],
 		"Global Ignores",
 	),
 	{ linterOptions: { reportUnusedDisableDirectives: "error" } },
@@ -64,7 +65,7 @@ export default defineConfig(
 		files: ["**/*.json"],
 	},
 	{
-		extends: [markdown.configs.recommended],
+		extends: [markdown.configs.recommended, markdownLinks.configs.recommended],
 		files: ["**/*.md"],
 		rules: {
 			// https://github.com/eslint/markdown/issues/294
@@ -79,23 +80,30 @@ export default defineConfig(
 	{
 		extends: [vitest.configs.recommended],
 		files: ["**/*.test.*"],
-		rules: { "@typescript-eslint/no-unsafe-assignment": "off" },
+		rules: {
+			"@typescript-eslint/no-unsafe-assignment": "off",
+			"vitest/prefer-describe-function-title": "error",
+		},
 		settings: { vitest: { typecheck: true } },
+	},
+	{
+		files: ["**/*.test.*", "eslint.config.*"],
+		rules: { "n/no-unsupported-features/node-builtins": "off" },
 	},
 	{
 		extends: [yml.configs["flat/standard"], yml.configs["flat/prettier"]],
 		files: ["**/*.{yml,yaml}"],
 		rules: {
 			"yml/file-extension": "error",
-			"yml/sort-keys": [
-				"error",
-				{ order: { type: "asc" }, pathPattern: "^.*$" },
-			],
+			"yml/sort-keys": "error",
 			"yml/sort-sequence-values": [
 				"error",
 				{ order: { type: "asc" }, pathPattern: "^.*$" },
 			],
 		},
 	},
-	{ extends: [packageJson.configs.recommended], files: ["package.json"] },
+	{
+		extends: [packageJson.configs.recommended, packageJson.configs.stylistic],
+		files: ["package.json"],
+	},
 );

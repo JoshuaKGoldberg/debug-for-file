@@ -11,63 +11,65 @@
 		"name": "Josh Goldberg ✨",
 		"email": "npm@joshuakgoldberg.com"
 	},
+	"sideEffects": false,
 	"type": "module",
 	"exports": {
 		".": {
-			"browser": "./lib/browser.js",
-			"default": "./lib/index.js"
+			"browser": "./dist/browser.js",
+			"default": "./dist/index.js"
 		}
 	},
-	"main": "lib/index.js",
-	"browser": "./lib/browser.js",
+	"main": "./dist/index.js",
+	"browser": "./dist/browser.js",
 	"files": [
-		"lib/"
+		"dist/"
 	],
 	"scripts": {
 		"build": "tsdown",
 		"format": "prettier .",
 		"lint": "eslint . --max-warnings 0",
 		"lint:knip": "knip",
+		"lint:knip:production": "knip --production",
 		"lint:packages": "pnpm dedupe --check",
 		"lint:spelling": "cspell \"**\" \".github/**/*\"",
 		"prepare": "husky",
 		"test": "vitest",
 		"tsc": "tsc"
 	},
-	"lint-staged": {
-		"*": "prettier --ignore-unknown --write"
-	},
 	"dependencies": {
 		"@types/debug": "^4.1.12",
 		"debug": "^4.4.3"
 	},
 	"devDependencies": {
-		"@eslint-community/eslint-plugin-eslint-comments": "4.8.0",
+		"@eslint-community/eslint-plugin-eslint-comments": "4.8.1",
 		"@eslint/js": "10.0.1",
 		"@eslint/markdown": "9.0.0",
 		"@release-it/conventional-changelog": "12.0.0",
 		"@types/node": "26.6.5",
 		"@vitest/coverage-v8": "5.1.0",
-		"@vitest/eslint-plugin": "1.6.5",
+		"@vitest/eslint-plugin": "1.6.27",
 		"console-fail-test": "0.10.0",
-		"create-typescript-app": "2.60.1",
-		"cspell": "10.5.0",
+		"create-typescript-app": "2.87.3",
+		"cspell": "10.5.2",
 		"eslint": "10.15.0",
 		"eslint-plugin-jsdoc": "65.5.0",
-		"eslint-plugin-jsonc": "3.4.0",
+		"eslint-plugin-jsonc": "3.4.1",
+		"eslint-plugin-markdown-links": "0.9.1",
 		"eslint-plugin-n": "18.5.0",
-		"eslint-plugin-package-json": "0.88.0",
+		"eslint-plugin-package-json": "1.14.0",
 		"eslint-plugin-perfectionist": "5.14.0",
-		"eslint-plugin-regexp": "3.3.0",
+		"eslint-plugin-regexp": "3.3.1",
 		"eslint-plugin-yml": "3.10.0",
 		"husky": "9.1.7",
-		"knip": "6.46.0",
-		"lint-staged": "17.6.0",
+		"jiti": "2.7.0",
+		"knip": "6.47.0",
 		"prettier": "3.10.0",
 		"prettier-plugin-curly": "0.4.1",
 		"prettier-plugin-packagejson": "3.1.0",
-		"prettier-plugin-sentences-per-line": "0.2.0",
+		"prettier-plugin-padding-lines": "0.1.0",
+		"prettier-plugin-sentences-per-line": "0.2.4",
 		"prettier-plugin-sh": "0.20.0",
+		"pretty-quick": "4.2.2",
 		"release-it": "21.1.0",
 		"tsdown": "0.23.0",
 		"typescript": "5.9.3",

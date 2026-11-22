@@ -1,8 +1,8 @@
 import { describe, expect, test } from "vitest";
 
-import { generateNamespace } from "./generateNamespace.js";
+import { generateNamespace } from "./generateNamespace.ts";
 
-describe("generateNamespace", () => {
+describe(generateNamespace, () => {
 	test.each([
 		["dist/index.js", undefined, "index"],
 		["dist\\index.js", undefined, "index"],
