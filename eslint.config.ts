@@ -39,6 +39,15 @@ export default defineConfig(
 			},
 		},
 		rules: {
+			// https://github.com/eslint-community/eslint-plugin-n/issues/472
+			"n/no-unpublished-bin": "off",
+
+			// Deliberately adopted while still experimental: https://github.com/JoshuaKGoldberg/debug-for-file/issues/485
+			"n/no-unsupported-features/node-builtins": [
+				"error",
+				{ ignores: ["module.findPackageJSON"] },
+			],
+
 			// Stylistic concerns that don't interfere with Prettier
 			"logical-assignment-operators": [
 				"error",
@@ -48,15 +57,6 @@ export default defineConfig(
 			"no-useless-rename": "error",
 			"object-shorthand": "error",
 			"operator-assignment": "error",
-
-			// https://github.com/eslint-community/eslint-plugin-n/issues/472
-			"n/no-unpublished-bin": "off",
-
-			// Deliberately adopted while still experimental: https://github.com/JoshuaKGoldberg/debug-for-file/issues/485
-			"n/no-unsupported-features/node-builtins": [
-				"error",
-				{ ignores: ["module.findPackageJSON"] },
-			],
 		},
 		settings: { perfectionist: { partitionByComment: true, type: "natural" } },
 	},
