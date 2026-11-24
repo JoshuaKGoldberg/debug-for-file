@@ -3,7 +3,7 @@ import { findPackageJSON } from "node:module";
 import * as path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
-import { generateNamespace } from "./generateNamespace.js";
+import { generateNamespace } from "./generateNamespace.ts";
 
 export function filePathToNamespace(filePath: string) {
 	const resolved = filePath.startsWith("file://")

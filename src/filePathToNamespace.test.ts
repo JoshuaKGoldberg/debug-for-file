@@ -4,7 +4,7 @@ import * as path from "node:path";
 import { pathToFileURL } from "node:url";
 import { afterAll, beforeAll, describe, expect, it, vi } from "vitest";
 
-import { filePathToNamespace } from "./filePathToNamespace.js";
+import { filePathToNamespace } from "./filePathToNamespace.ts";
 
 const mockFindPackageJSON = vi.fn();
 
@@ -36,7 +36,7 @@ afterAll(() => {
 	fs.rmSync(fixtures, { force: true, recursive: true });
 });
 
-describe("filePathToNamespace", () => {
+describe(filePathToNamespace, () => {
 	it("generates a namespace with just the filePath when findPackageJSON doesn't resolve a package.json", () => {
 		mockFindPackageJSON.mockReturnValueOnce(undefined);
 
