@@ -56,6 +56,5 @@
   ],
   "projectName": "debug-for-file",
   "projectOwner": "JoshuaKGoldberg",
-  "repoType": "github",
-  "commitConvention": "angular"
+  "repoType": "github"
 }

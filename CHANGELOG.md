@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.5.1](https://github.com/JoshuaKGoldberg/debug-for-file/compare/0.5.0...0.5.1) (2026-11-24)
+
+### Bug Fixes
+
+- bump to create-typescript-app@2.87.18 ([#723](https://github.com/JoshuaKGoldberg/debug-for-file/issues/723)) ([39dda12](https://github.com/JoshuaKGoldberg/debug-for-file/commit/39dda12b4944edaab69fe2b499922de96eff5377)), closes [#722](https://github.com/JoshuaKGoldberg/debug-for-file/issues/722)
+
 ## [0.5.0](https://github.com/JoshuaKGoldberg/debug-for-file/compare/0.4.2...0.5.0) (2026-09-22)
 
 ### Features
